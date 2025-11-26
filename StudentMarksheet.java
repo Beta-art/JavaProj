@@ -6,7 +6,6 @@ public class StudentMarksheet {
         // Creating a Scanner object for input
         Scanner scanner = new Scanner(System.in);
 
-        // --- 1. TITLE BLOCK ---
         System.out.println("\n=======================================================");
         System.out.println("Dedan Kimathi University of Technology");
         System.out.println("School of Computer Science and IT");
@@ -15,7 +14,7 @@ public class StudentMarksheet {
         System.out.println("STUDENT MARKSHEET (SECOND YEAR RESULTS)");
         System.out.println("=======================================================\n");
 
-        // Define unit names (for header printing)
+        // Defining unit names
         final String UNIT_1 = "CCS 2211";
         final String UNIT_2 = "CCS 2212";
         final String UNIT_3 = "CCS 2213";
@@ -24,10 +23,6 @@ public class StudentMarksheet {
         final String UNIT_6 = "CCS 2216";
         final String UNIT_7 = "CCS 2217";
         final int NUM_UNITS = 7; // Used only for calculation
-
-        // -------------------------------------------------------------------
-        // --- 2. INPUT CAPTURE AND VARIABLE DECLARATION ---
-        // -------------------------------------------------------------------
 
         System.out.println("Please enter data for 5 students (ensure all marks are whole numbers):");
         System.out.println("----------------------------------------------------------------------\n");
@@ -54,7 +49,7 @@ public class StudentMarksheet {
         System.out.print("Enter marks for " + UNIT_7 + ": ");
         int m1_u7 = scanner.nextInt();
 
-        // --- Student 2 (Group Member 2: Stephen Ongoma) ---
+        // --- Student 2 (Group Member 2: ) ---
         System.out.println("\n--- Student 2 ---");
         System.out.print("Enter Registration Number : ");
         String regNo2 = scanner.next();
@@ -76,7 +71,7 @@ public class StudentMarksheet {
         System.out.print("Enter marks for " + UNIT_7 + ": ");
         int m2_u7 = scanner.nextInt();
 
-        // --- Student 3 (Sample Student 1) ---
+        // --- Student 3  ---
         System.out.println("\n--- Student 3 ---");
         System.out.print("Enter Registration Number: ");
         String regNo3 = scanner.next();
@@ -98,7 +93,7 @@ public class StudentMarksheet {
         System.out.print("Enter marks for " + UNIT_7 + ": ");
         int m3_u7 = scanner.nextInt();
 
-        // --- Student 4 (Sample Student 2) ---
+        // --- Student 4 ---
         System.out.println("\n--- Student 4 ---");
         System.out.print("Enter Registration Number: ");
         String regNo4 = scanner.next();
@@ -120,7 +115,7 @@ public class StudentMarksheet {
         System.out.print("Enter marks for " + UNIT_7 + ": ");
         int m4_u7 = scanner.nextInt();
 
-        // --- Student 5 (Sample Student 3) ---
+        // --- Student 5 ---
         System.out.println("\n--- Student 5 ---");
         System.out.print("Enter Registration Number: ");
         String regNo5 = scanner.next();
@@ -142,11 +137,7 @@ public class StudentMarksheet {
         System.out.print("Enter marks for " + UNIT_7 + ": ");
         int m5_u7 = scanner.nextInt();
 
-        scanner.close(); // Close scanner once all input is done
-
-        // -------------------------------------------------------------------
-        // --- 3. CALCULATIONS ---
-        // -------------------------------------------------------------------
+        scanner.close(); 
 
         // Student 1 Calculations
         int totalMarks1 = m1_u1 + m1_u2 + m1_u3 + m1_u4 + m1_u5 + m1_u6 + m1_u7;
@@ -168,16 +159,11 @@ public class StudentMarksheet {
         int totalMarks5 = m5_u1 + m5_u2 + m5_u3 + m5_u4 + m5_u5 + m5_u6 + m5_u7;
         double avgMarks5 = (double) totalMarks5 / NUM_UNITS;
 
-        // -------------------------------------------------------------------
-        // --- 4. FORMATTED OUTPUT (Using printf) ---
-        // -------------------------------------------------------------------
 
         System.out.println("\n\n*********************************************************************************");
         System.out.println(" STUDENT MARK SHEET ");
         System.out.println("*********************************************************************************\n");
 
-        // --- FORMAT STRINGS ---
-        // Column widths: RegNo(16), Name(25), Units(8*7), Totals(8), Average(10), Status(8), Grade(6)
         final String HEADER_FORMAT = "| %-16s | %-25s | %-8s | %-8s | %-8s | %-8s | %-8s | %-8s | %-8s | %-8s | %-10s | %-8s | %-6s |\n";
         final String DATA_FORMAT   = "| %-16s | %-25s | %-8d | %-8d | %-8d | %-8d | %-8d | %-8d | %-8d | %-8d | %-10.2f | %-8s | %-6s |\n";
         final String SEPARATOR     = "+------------------+---------------------------+----------+----------+----------+----------+----------+----------+----------+----------+------------+----------+--------+\n";
